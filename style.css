@@ -6,3 +6,108 @@
  /*******************************
  Global Settings
  ******************************/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 1170px;
+    margin:0 auto;
+}
+:root{
+    --white: #fff;
+    --btn-color: #E02C6D;
+    --Black-color: #18191F;
+    --p-color: #6C6C6C; 
+}
+a{
+    text-decoration: none;
+    color: white;
+    list-style-type: none;
+}
+ul{
+    list-style: none;
+}
+.dis-flex{
+    display:flex;
+}
+.dis-block{
+    display: block;
+}
+
+
+
+
+/******************* Header Css Start Here *******************/
+#header{
+    width: 100%;
+    height: 100vh;
+    background-color: #2D25A0;
+}
+.menu-bar{
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 5px;
+}
+.main-menu ul li{
+    display: inline-block;
+    margin: 0 20px;
+}
+.main-menu ul li:first-child{
+    margin-left: 0;
+}
+.main-menu ul li a{
+    font-size: 16px;
+    font-weight: 500;
+    transition: border-bottom 0.3s ease-in-out;
+}
+
+.main-menu ul li a:hover{
+    border-bottom: 2px solid var(--btn-color);
+}
+.btn{
+    width: 135px;
+    display: flex;
+    align-items: center;
+    background-color: var(--btn-color);
+    padding: 10px 24px;
+    border-radius: 3px;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #e25789;
+}
+.btn i{
+    font-size: 24px;
+    color: var(--white);
+    margin-right: 12px;
+}
+.header-content{
+    justify-content: space-between;
+    align-items: center;
+}
+.left-head h1{
+    color: var(--white);
+    font-size: 65px;
+    line-height: 80px;
+    font-weight: 700;
+    margin-bottom: 30px;
+
+}
+.left-head>.btn{
+    width: 180px;
+    margin-right: 0px;
+}
+.left-head>.btn>a{
+    margin-right: 12px;
+}
+.right-head img{
+    width:560px;
+    height: 440px;
+}
+
+/******************* Header Css Ends Here *******************/
