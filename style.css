@@ -3,6 +3,7 @@
  ******************************/
  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+
  /*******************************
  Global Settings
  ******************************/
@@ -10,6 +11,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
     font-family: 'Poppins', sans-serif;
@@ -28,6 +30,9 @@ a{
     text-decoration: none;
     color: white;
     list-style-type: none;
+}
+p{
+    color: #6C6C6C;
 }
 ul{
     list-style: none;
@@ -109,5 +114,48 @@ ul{
     width:560px;
     height: 440px;
 }
-
 /******************* Header Css Ends Here *******************/
+
+
+/******************* Main Section Start Here *******************/
+.blog-card {
+    width: 330px;
+    box-shadow: 3px 3px 20px rgb(0 0 0 / 30%);
+    padding: 15px;
+    border-radius: 5px;
+}
+.blog-card .card-img img{
+    width:100%;
+    background-size: cover;
+    background-position: center;
+    
+}
+.blog-card .card-content{
+    width:100%;
+}
+.blog-card .card-content h2{
+    font-weight: 600;
+}
+.blog-wrapper{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap: 27px;
+    padding: 70px 40px;
+    
+
+}
+
+.highLight-wrapper{
+    display: flex;
+    align-items: center;
+    padding: 90px 40px;
+}
+.highLight-wrapper .right-highLight-content img{
+    width: 570px;
+    height: 430px;
+}
+.left-highLight-content h1{
+    font-size: 48px;
+    font-weight: 600;
+}
+/******************* Main Section Ends Here *******************/
