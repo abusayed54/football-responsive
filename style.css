@@ -1,7 +1,7 @@
 /*******************************
  Google Fonts (Poppins Regular)
  ******************************/
- @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,600&display=swap');
 
 
  /*******************************
@@ -44,6 +44,24 @@ ul{
     display: block;
 }
 
+/************* Animation Keyframes *****************/
+@keyframes spin01 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+@keyframes spin02 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform:rotate(-360deg);
+    }
+}
+
 
 
 
@@ -58,24 +76,56 @@ ul{
     align-items: center;
     padding: 36px 5px;
 }
-.main-menu ul li{
-    display: inline-block;
-    margin: 0 20px;
-}
-.main-menu ul li:first-child{
+.menu-bar>.btn>i{
     margin-left: 0;
+    margin-right: 10px;
 }
-.main-menu ul li a{
-    font-size: 16px;
-    font-weight: 500;
-    transition: border-bottom 0.3s ease-in-out;
+.main-menu>ul>li{
+    display: inline-block;
+    margin: 0 10px;
+    position:relative;
+}
+.main-menu>ul>li:hover .submenu{
+    display: block;
+}
+.submenu{
+    position: absolute;
+    width:145px;
+    height: 140px;
+    margin-top: 10px;
+    border-radius: 4px;
+    background-color: #170e98;
+    display: none;
 }
 
-.main-menu ul li a:hover{
-    border-bottom: 2px solid var(--btn-color);
+
+.submenu>ul>li{
+    margin-bottom: 5px;
+    transition: background-color 0.22s ease;
+}
+.submenu>ul>li:hover{
+    background-color: var(--btn-color);
+}
+.submenu>ul>li>a{
+    padding: 5px 8px;
+    font-size: 20px;
+}
+.main-menu>ul>li:first-child{
+    margin-left: 0;
+}
+.main-menu>ul>li>a{
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.22s ease, color 0.22s ease;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+.main-menu>ul>li>a:hover{
+    background-color: var(--btn-color);
 }
 .btn{
-    width: 135px;
+    width: 120px;
     display: flex;
     align-items: center;
     background-color: var(--btn-color);
@@ -89,7 +139,7 @@ ul{
 .btn i{
     font-size: 24px;
     color: var(--white);
-    margin-right: 12px;
+    margin-left: 12px;
 }
 .header-content{
     justify-content: space-between;
@@ -114,6 +164,16 @@ ul{
     width:560px;
     height: 440px;
 }
+.right-head::before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border: 3px solid var(--btn-color);
+    left: calc(52% - 10px);
+    top: calc(70% - 50px);
+    animation: spin01 4s linear infinite;
+}
 /******************* Header Css Ends Here *******************/
 
 
@@ -123,18 +183,40 @@ ul{
     box-shadow: 3px 3px 20px rgb(0 0 0 / 30%);
     padding: 15px;
     border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+.blog-card:hover{
+    transform: skewY(2deg);
+    cursor: pointer;
+}
+.blog-card .card-img{
+    overflow: hidden;
+    
 }
 .blog-card .card-img img{
     width:100%;
     background-size: cover;
     background-position: center;
+    transition:transform 0.3s ease;
     
+}
+.blog-card .card-img:hover img{
+    transform: scale(1.1);
 }
 .blog-card .card-content{
     width:100%;
+    text-align: center;
+    
 }
 .blog-card .card-content h2{
     font-weight: 600;
+    background-color: #170e98;
+    color: var(--white);
+    border-radius: 8px;
+    padding: 8px 3px;
+    text-align: center;
+    position: relative;
+    transform: translateY(-50%);
 }
 .blog-wrapper{
     display:grid;
@@ -142,20 +224,82 @@ ul{
     grid-row-gap: 27px;
     padding: 70px 40px;
     
-
 }
 
 .highLight-wrapper{
+    background-color: rgba(255, 33, 166, 0.1);
     display: flex;
     align-items: center;
     padding: 90px 40px;
+    border-left: 5px solid var(--btn-color)
 }
 .highLight-wrapper .right-highLight-content img{
     width: 570px;
     height: 430px;
 }
+.left-highLight-content{
+    padding: 0 10px;
+}
+.left-highLight-content a{
+    margin-top: 10%;
+}
 .left-highLight-content h1{
     font-size: 48px;
+    font-weight: 700;
+    color:var(--Black-color);
+
+}
+.left-highLight-content>.btn{
+    width:180px
+}
+
+.top-menu{
+    padding: 50px 40px;
+}
+.top-menu h2{
+    margin-bottom: 10px;
+    color: var(--Black-color);
+    letter-spacing: 3px;
+}
+.bottom-menu{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 30px;
+    text-align: left;
+    padding: 35px 40px;
+}
+.single-wrapper{
+    width: 440px;
+    display: flex;
+    align-items: center;
+    
+}
+.single-wrapper .font-awe-i{
+    position: relative;
+    width:100px;
+    height: 68px;
+    background-color: rgba(255, 33, 166, 0.1);
+    padding: 5px;
+}
+.single-wrapper .font-awe-i i{
+    position:absolute;
+    font-size: 45px;
+    margin: 9% 21%;
+    color: var(--btn-color);
+    transition: animation 0.4s ease-in;
+}
+.single-wr-content{
+    margin-left: 30px;
+}
+.single-wr-content h3{
+    color: var(--Black-color);
     font-weight: 600;
+}
+.single-wr-content span{
+    font-weight: 700;
+}
+.font-awe-i:hover i{
+    animation: spin02 0.2s linear 2;
+    cursor: pointer;
 }
 /******************* Main Section Ends Here *******************/
