@@ -393,14 +393,20 @@ ul{
  Responsive Design 
  ***************************/
 
+
+/* Mobile Device */
  @media (max-width:700px) {
      
      #header{
          height: 100%;
      }
+     .menu-bar>.btn{
+        margin-left: 64%;
+     }
      .btn{
-        padding: 4px 8px;
-        font-size: 24px;
+        padding: 4px 4px;
+        font-size: 16px;
+        
      }
      
      .header-content{
@@ -496,6 +502,30 @@ ul{
     .footer-wrapper .img-wrapper img{
         width:100%;
     }
+    .social-icon{
+        margin-left: 18%;
+    }
+    .copyright{
+        margin-left: 18%;
+    }
 }
 
+/* Tablet Device */
 
+@media (max-width:992px) {
+    #header{
+        height: 100%;
+    }
+    .header-content{
+        padding: 0 15px;
+    }
+    .left-head{
+        margin-bottom: 15px;
+    }
+    .blog-wrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .left-highLight-content h1{
+        font-size: 30px;
+    }
+}
